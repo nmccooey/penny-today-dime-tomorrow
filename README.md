@@ -1,0 +1,1 @@
+A fictitious blog website that offers straightforward financial advice to young people.
