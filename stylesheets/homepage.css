@@ -1,0 +1,81 @@
+@import url(sitewide.css);
+@import url(blogcard.css);
+
+.grid-container {
+    padding: 5px;
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 1fr 1fr;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "sd"
+    "ft";
+}
+
+.box {
+    border: solid black 2px;
+    padding: 15px;
+}
+
+.header {
+    grid-area: hd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.sidebar {
+    grid-area: sd;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.content {
+    grid-area: main;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    grid-area: ft;
+    align-items: center;
+}
+
+.featured-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-article p {
+    line-height: 2;
+    text-align: justify;
+}
+
+@media (min-width: 901px){
+    .grid-container {
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 180px 600px 60px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd hd"
+        "sd main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+    }
+}
