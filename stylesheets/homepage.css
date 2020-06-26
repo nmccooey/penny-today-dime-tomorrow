@@ -1,5 +1,6 @@
 @import url(sitewide.css);
 @import url(blogcard.css);
+@import url(navbar.css);
 
 .grid-container {
     padding: 5px;
@@ -16,7 +17,7 @@
 
 .box {
     border: solid black 2px;
-    padding: 15px;
+    padding: 10px;
 }
 
 .header {
@@ -40,9 +41,19 @@
 
 .sidebar {
     grid-area: sd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-container {
+    max-height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    overflow: scroll;
+    padding: 5px;
 }
 
 .content {
@@ -78,4 +89,8 @@
         "sd main main main main main main main"
         "ft ft ft ft ft ft ft ft";
     }
+
+    .content {
+        overflow: scroll;
+    }    
 }
